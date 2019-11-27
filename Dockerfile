@@ -6,6 +6,7 @@ ADD ./docker/wrapdocker /usr/local/bin/wrapdocker
 
 ARG CLOUD_SDK_VERSION=263.0.0
 ENV CLOUD_SDK_VERSION=$CLOUD_SDK_VERSION
+ENV DOCKER_HOST=tcp://docker:2375/
 
 ENV PATH /google-cloud-sdk/bin:$PATH
 RUN apk add --update && \
