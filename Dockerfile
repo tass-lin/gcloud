@@ -34,6 +34,4 @@ RUN apk add --update && \
 COPY ./docker/start.sh /start.sh
 COPY ./docker/supervisord.conf /etc/supervisor.d/supervisord.ini
 
-VOLUME /var/lib/docker
-
 CMD /usr/bin/supervisord -n -c /etc/supervisord.conf;
